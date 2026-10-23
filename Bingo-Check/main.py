@@ -52,6 +52,7 @@ def main():
       [67, "x", 98, 39, 44],
       [21, "x", 24, 30, 52]
     ])
+    print(output)
     assert output == True
 
     output = bingo_check([
@@ -61,6 +62,7 @@ def main():
       [67, 98, 39, "x", 44],
       [21, 59, 24, 30, "x"]
     ]) 
+    print(output)
     assert output == True
 
     output = bingo_check([
@@ -70,6 +72,7 @@ def main():
       [67, 19, 98, 39, 44],
       [21, 75, 24, 30, 52]
     ]) 
+    print(output)
     assert output == True
 
     output = bingo_check([
@@ -79,6 +82,7 @@ def main():
       [67, "x", 98, "x", 44],
       [21, "x", 24, 30, 52]
     ]) 
+    print(output)
     assert output == False
 
 if __name__ == '__main__':
