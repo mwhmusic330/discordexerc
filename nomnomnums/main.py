@@ -5,10 +5,12 @@ When it eats, it becomes the sum of both numbers.
 Keep repeating this process from left to right until no more eating can happen. """
 
 def nom_nom(example: list) -> list[int]:
-    for i in range(len(example)):
-        output = []
+    output = []
+    for i in range(len(example)-1):
         if example[i] > example[i+1]:
-
+            sum = example[i] + example[i+1]
+            output.append(sum)
+    print(output)
 
 
 
