@@ -5,7 +5,10 @@ When it eats, it becomes the sum of both numbers.
 Keep repeating this process from left to right until no more eating can happen. """
 
 def nom_nom(example: list) -> list[int]:
-    for num in example:
+    for i in range(len(example)):
+        output = []
+        if example[i] > example[i+1]:
+
 
 
 
