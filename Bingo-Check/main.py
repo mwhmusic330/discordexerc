@@ -26,6 +26,14 @@ def bingo_check(board: list) -> bool:
                 break
         if win:
             return True
+    if board[0][-1] == "x":
+        win = True
+        for i in range(5):
+            if board[i][4 - i] != "x":
+                win = False
+                break
+        if win:
+            return True
 
     return False
 
