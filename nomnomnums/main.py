@@ -10,6 +10,9 @@ def nom_nom(example: list) -> list[int]:
         if example[i] > example[i+1]:
             sum = example[i] + example[i+1]
             output.append(sum)
+            if sum > example[i+2]:
+                nextsum = sum + example[i+2]
+                output.append(nextsum)
     print(output)
 
 
