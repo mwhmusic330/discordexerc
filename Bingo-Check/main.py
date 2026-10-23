@@ -14,10 +14,13 @@ def bingo_check(board: list) -> bool:
     if "x" in line:
         fp = line.index("x")
 
+        vert_win = True
         for i in board[1:]:
             if i[fp] != "x":
-                return False
-        return True
+                vert_win = False
+                break
+        if vert_win:
+            return True
     # diagonal (top-left to bottom-right)
     if board[0][0] == "x":
         win = True
