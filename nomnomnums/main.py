@@ -7,12 +7,15 @@ Keep repeating this process from left to right until no more eating can happen. 
 def nom_nom(example: list) -> list[int]:
     output = []
     for i in range(len(example)-1):
+        if example[i] < example[i+1]:
+            output.append(example[i])
         if example[i] > example[i+1]:
             sum = example[i] + example[i+1]
             output.append(sum)
             if sum > example[i+2]:
                 nextsum = sum + example[i+2]
                 output.append(nextsum)
+                del output[0]
     print(output)
 
 
