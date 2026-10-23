@@ -18,6 +18,7 @@ def bingo_check(board: list) -> bool:
             if i[fp] != "x":
                 return False
         return True
+    # diagonal (top-left to bottom-right)
     if board[0][0] == "x":
         win = True
         for i in range(5):
@@ -26,6 +27,7 @@ def bingo_check(board: list) -> bool:
                 break
         if win:
             return True
+    # diagonal (top-right to bottom-left)
     if board[0][-1] == "x":
         win = True
         for i in range(5):
