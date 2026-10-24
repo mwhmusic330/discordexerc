@@ -23,7 +23,7 @@ output = ["01:45", "02:40"]
 
 """
 
-def calc_bedtime(bedtime: list[str]) -> list[str]:
+def bedTime(*times) -> list[str]:
 
 
 
@@ -36,13 +36,16 @@ def calc_bedtime(bedtime: list[str]) -> list[str]:
 
 def main():
 
-    bedTime(["07:50", "07:50"])
+    output = bedTime(["07:50", "07:50"])
+    print(output)
 
 
-    bedTime(["06:15", "10:00"], ["08:00", "10:00"], ["09:30", "10:00"])
+    output = bedTime(["06:15", "10:00"], ["08:00", "10:00"], ["09:30", "10:00"])
+    print(output)
 
 
-    bedTime(["05:45", "04:00"], ["07:10", "04:30"])
+    output = bedTime(["05:45", "04:00"], ["07:10", "04:30"])
+    print(output)
 
 
 if __name__ == '__main__':
