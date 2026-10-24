@@ -41,7 +41,6 @@ def bedTime(*times) -> list[str]:
     return result 
 
 
-
 def main():
 
     output = bedTime(["07:50", "07:50"])
