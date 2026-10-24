@@ -28,9 +28,11 @@ def bedTime(*times) -> list[str]:
     for alarm, duration in times:
         ah, am = alarm.split(":")
         alarm_minutes = int(ah) * 60 + int(am)
+
         dh, dm = alarm.split(":")
         duration_minutes = int(ah) * 60 + int(am)
 
+        bed_minutes = (alarm_minutes - duration_minutes) % 1440
 
 
 
