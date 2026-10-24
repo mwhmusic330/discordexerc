@@ -24,7 +24,10 @@ output = ["01:45", "02:40"]
 """
 
 def bedTime(*times) -> list[str]:
+    result = []
     for alarm, duration in times:
+        ah, am = alarm.split(":")
+        alarm_minutes = int(ah) * 60 + int(am)
 
 
 
@@ -33,6 +36,7 @@ def bedTime(*times) -> list[str]:
 
 
 
+    return result 
 
 
 
