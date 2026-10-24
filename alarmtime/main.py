@@ -36,11 +36,7 @@ def bedTime(*times) -> list[str]:
 
         bed_time = f"{bed_minutes // 60:02d}:{bed_minutes % 60:02d}"
 
-
-
-
-
-
+        result.append(bed_time)
 
     return result 
 
