@@ -34,7 +34,7 @@ def bedTime(*times) -> list[str]:
 
         bed_minutes = (alarm_minutes - duration_minutes) % 1440
 
-        bed_time = f"{bed_minutes //60:02d}:
+        bed_time = f"{bed_minutes // 60:02d}:{bed_minutes % 60:02d}"
 
 
 
