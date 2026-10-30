@@ -11,8 +11,15 @@ def parse_input(input_string):
 def find_nums(input_string):
     lines =  parse_input(input_str)
     print(lines)
+
     content = lines[:3]
     print(content)
+
+    zero = (" _ ", "| |", "|_|")
+
+    digits = []
+    width = len(content[0]) // 3
+
 
 def main():
     result = find_nums(input_str)
