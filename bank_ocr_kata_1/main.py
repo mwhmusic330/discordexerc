@@ -7,5 +7,17 @@ def parse_input(input_string):
     lines = [line.strip() for line in input_string.split('\n')]
     return lines
 
-lines =  parse_input(input_str)
-print(lines)
+
+def find_nums(input_string):
+    lines =  parse_input(input_str)
+    print(lines)
+    content = lines[:3]
+    print(content)
+
+def main():
+    result = find_nums(input_str)
+    print(result)
+
+
+if __name__ == '__main__':
+    main()
