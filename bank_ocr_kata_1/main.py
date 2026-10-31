@@ -9,8 +9,8 @@ def parse_input(input_string):
 
 
 def find_nums(input_string):
+
     lines =  parse_input(input_str)
-    print(lines)
 
     content = lines[:3]
     print(content)
@@ -19,9 +19,20 @@ def find_nums(input_string):
 
     digits = []
     width = len(content[0]) // 3
+    
+    for d in range(width):
+        cell = tuple(row[d * 3 : d * 3 + 3] for row in content)
+        if cell == zero:
+            digits.append("0")
+        else:
+            digits.append("?")
+    return "".join(digits)
 
 
 def main():
+    lines =  parse_input(input_str)
+    print(lines)
+
     result = find_nums(input_str)
     print(result)
 
