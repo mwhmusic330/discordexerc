@@ -40,10 +40,22 @@
 |_||_||_||_||_||_||_||_||_|
  _| _| _| _| _| _| _| _| _|
                            """
-input_str = """    _  _     _  _  _  _  _ 
+"""    _  _     _  _  _  _  _ 
   | _| _||_||_ |_   ||_||_|
-  ||_  _|  | _||_|  ||_| _|
+  ||_  _|  | _||_|  ||_| _
+                           """  
+""" _  _  _  _  _  _  _  _    
+| || || || || || || ||_   |
+|_||_||_||_||_||_||_| _|  |
                            """
+"""    _  _  _  _  _  _     _ 
+|_||_|| || ||_   |  |  | _ 
+  | _||_||_||_|  |  |  | _|
+                           """
+input_str = """    _  _     _  _  _  _  _ 
+  | _| _||_| _ |_   ||_||_|
+  ||_  _|  | _||_|  ||_| _ 
+                            """
 def parse_input(input_string):
     lines = [line for line in input_string.split('\n')]
     return lines
@@ -74,7 +86,7 @@ def find_nums(input_string):
         d  = d*3
         cell = tuple(row[d : d + 3] for row in content)
         digits.append(digit_map.get(cell, "?"))### type:ignore
-        print(digits)
+    print(digits)
         
     return "".join(digits)
 
