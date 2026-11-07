@@ -114,9 +114,10 @@ def main():
     test = checksum(result)
     print(test)
     if "?" in result:
-        print(f"{result} ILL")
+        final_output = f"{result} ILL"
     else:
-        print(f"{result} {test}")
+        final_output = f"{result} {test}"
+    print(final_output.strip())
     
 
 if __name__ == '__main__':
