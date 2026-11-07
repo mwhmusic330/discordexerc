@@ -74,7 +74,7 @@ def find_nums(input_string):
         d  = d*3
         cell = tuple(row[d : d + 3] for row in content)
         digits.append(digit_map.get(cell, "?"))### type:ignore
-        print(cell)
+        print(digits)
         
     return "".join(digits)
 
