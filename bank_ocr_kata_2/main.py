@@ -94,7 +94,10 @@ def checksum(result):
     rev_result = result[::-1]
     total = 0
     for i, digit in enumerate(rev_result, 1):
-        total += i*int(digit)
+        if digit.isdigit():
+            total += i*int(digit)
+        else:
+            return " "
     if total % 11 == 0:
         return " "
     else:
