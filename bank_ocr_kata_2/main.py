@@ -113,6 +113,10 @@ def main():
 
     test = checksum(result)
     print(test)
+    if "?" in result:
+        print(f"{result} ILL")
+    else:
+        print(f"{result} {test}")
     
 
 if __name__ == '__main__':
