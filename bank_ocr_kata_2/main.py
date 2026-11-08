@@ -1,6 +1,5 @@
 test_cases = [
 """ _  _  _  _  _  _  _  _  _
-
 | || || || || || || || || |
 |_||_||_||_||_||_||_||_||_|
                            """,
@@ -57,14 +56,14 @@ test_cases = [
   | _| _||_| _ |_   ||_||_|
   ||_  _|  | _||_|  ||_| _ 
                             """]
-def parse_input(input_string):
-    lines = [line for line in input_string.split('\n')]
+def parse_input(acct):
+    lines = [line for line in acct.split('\n')]
     return lines
 
 
-def find_nums(input_string):
+def find_nums(acct):
 
-    lines =  parse_input(input_str)
+    lines =  parse_input(acct)
 
     content = lines[:3]
 
@@ -104,21 +103,15 @@ def checksum(result):
         return "ERR"
 def main():
     for i, acct_num in enumerate(test_cases):
-      print(i)
-    lines =  parse_input(input_str)
+      lines =  parse_input(acct_num)
+      result = find_nums(acct_num)
 
-    
-
-    result = find_nums(input_str)
-    print(result)
-
-    test = checksum(result)
-    print(test)
-    if "?" in result:
-        final_output = f"{result} ILL"
-    else:
-        final_output = f"{result} {test}"
-    print(final_output.strip())
+      test = checksum(result)
+      if "?" in result:
+          final_output = f"{result} ILL"
+      else:
+          final_output = f"{result} {test}"
+      print(final_output.strip())
     
 
 if __name__ == '__main__':
