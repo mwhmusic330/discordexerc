@@ -71,8 +71,10 @@ def find_nums(input_string):
     width = len(content[0]) // 3
     
     for d in range(width):
-        cell = tuple(row[d * 3 : d * 3 + 3] for row in content)
-        digits.append(digit_map.get(cell, "?"))
+        d  = d*3
+        cell = tuple(row[d : d + 3] for row in content)
+        digits.append(digit_map.get(cell, "?"))### type:ignore
+        print(cell)
         
     return "".join(digits)
 
@@ -80,6 +82,7 @@ def find_nums(input_string):
 def main():
 
     lines =  parse_input(input_str)
+
 
     result = find_nums(input_str)
     print(result)
