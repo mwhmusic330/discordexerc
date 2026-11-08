@@ -103,7 +103,7 @@ def checksum(result):
     else:
         return "ERR"
 def main():
-    for i, in test_cases:
+    for i, acct_num in enumerate(test_cases):
       print(i)
     lines =  parse_input(input_str)
 
