@@ -111,6 +111,11 @@ def check_cell(acct):
     for i in range(0,27,3):
         digit_grid = [line[i: i + 3] for line in content]
         ascii_nums.append(digit_grid)
+    test_digit = ascii_nums[0]
+    mutable_grid = [list(row) for row in test_digit]
+    mutable_grid[0][1] = "-"
+    updated_grid = ["".join(row) for row in mutable_grid]
+    print(updated_grid)
     return ascii_nums
 
 
